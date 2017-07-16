@@ -1,0 +1,58 @@
+/* ==========================================================================
+   Author's custom styles
+   ========================================================================== */
+body {
+	font-family: 'Zilla Slab', serif;
+}
+
+a,
+a:hover {
+	text-decoration: none;
+	color: #4D4356;
+}
+
+#sideNav {
+	background-color: #1B1321;
+	color: #7c7997;
+	width: 200px;
+	position: absolute;
+	height: 100%;
+	padding: 0;
+	font-size: 16px;
+	line-height: 25px;
+}
+#sideNav p,
+#sideNav li a {
+	padding: 10px 20px;
+}
+#sideNav a {
+	display: block;
+}
+#sideNav ul {
+	list-style: none;
+	padding: 0;
+}
+#sideNav li:not(.sidebar-header):hover {
+	background: #201F28;
+}
+.sidebar-header {
+	background: #4D4356;
+	padding: 0 20px;
+}
+
+#mainContent {
+	float: left;
+	width: 84%;
+	margin-left: 200px;
+	background-color: #0D0514;
+	height: 100vh;
+	color: #7c7997;
+	padding: 0;
+}
+
+
+
+
+.uppercase {
+	text-transform: uppercase;
+}
