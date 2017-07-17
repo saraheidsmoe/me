@@ -3,7 +3,7 @@
    ========================================================================== */
 body {
 	font-family: 'Zilla Slab', serif;
-	background: white;
+	background: #f9f9f9;
 }
 ::selection {
 	background: #1d2120;
