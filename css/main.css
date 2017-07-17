@@ -3,56 +3,83 @@
    ========================================================================== */
 body {
 	font-family: 'Zilla Slab', serif;
+	background: white;
 }
-
-a,
+::selection {
+	background: #1d2120;
+	color: white;
+}
+::-moz-selection {
+	background: #1d2120;
+	color: white;
+}
+a {
+	color: #bcd5d1;
+	transition: all 1.5s ease;
+}
 a:hover {
 	text-decoration: none;
-	color: #4D4356;
+	color: #1d2120;
 }
 
 #sideNav {
-	background-color: #1B1321;
 	color: #7c7997;
 	width: 200px;
-	position: absolute;
+	position: fixed;
 	height: 100%;
 	padding: 0;
+	padding-top: 50px;
 	font-size: 16px;
 	line-height: 25px;
 }
 #sideNav p,
 #sideNav li a {
-	padding: 10px 20px;
+	padding: 10px 0 10px 45px;
 }
 #sideNav a {
 	display: block;
+	border-left: 5px solid transparent;
+}
+#sideNav a.active {
+	border-color: #1d2120;
+	color: #1d2120;
 }
 #sideNav ul {
 	list-style: none;
 	padding: 0;
 }
-#sideNav li:not(.sidebar-header):hover {
-	background: #201F28;
+#sideNav li:hover a {
+	color: #1d2120;
 }
-.sidebar-header {
-	background: #4D4356;
-	padding: 0 20px;
+#sideNav p:first-of-type {
+	padding-top: 0;
 }
 
 #mainContent {
 	float: left;
 	width: 84%;
 	margin-left: 200px;
-	background-color: #0D0514;
+	background-color: white;
 	height: 100vh;
 	color: #7c7997;
-	padding: 0;
+	padding: 50px;
+}
+#mainContent img {
+	max-width: 100%;
+	height: auto;
+	margin-bottom: 50px;
 }
 
-
-
-
-.uppercase {
-	text-transform: uppercase;
+#portraits,
+#misc {
+	display: none;
+}
+.title {
+	font-size: 28px;
+}
+.contact {
+	position: absolute;
+	bottom: 0;
+	margin: 0 0 50px 50px;
+	border: none !important;
 }
