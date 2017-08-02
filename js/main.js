@@ -9,10 +9,14 @@ $( document ).ready(function() {
 			$(this).addClass("active");
 		}
 
-		// Scroll to photos
-		$('html, body').animate({
-			scrollTop: $("#mainContent").offset().top
-		}, 2000);
+		// if mobile...
+		if( /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent) ) {
+			// ... Scroll to photos
+			$('html, body').animate({
+				scrollTop: $("#mainContent").offset().top
+			}, 2000);
+		}
+		
 
 		// Show related photos, hide others
 		$("#" + idname).show().siblings().hide();
