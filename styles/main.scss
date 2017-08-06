@@ -6,10 +6,6 @@ body {
 	background: #1d2120;
 	color: white;
 }
-::-moz-selection {
-	background: #1d2120;
-	color: white;
-}
 
 a {
 	color: #bcd5d1;
@@ -83,7 +79,6 @@ a {
 	top: 0;
 }
 .sticky {
-	position: -webkit-sticky;
 	position: sticky;
 }
 .sub-section {
@@ -100,14 +95,11 @@ a {
 
 }
 
- /* Custom, iPhone */ 
+/* Custom, iPhone */ 
 @media only screen and (min-width: 320px) {
 	#sideNav {
 		background-image: url(../img/Bird.png);
 		background-size: cover;
-	}
-	.sub-section {
-		min-height: 100vh;
 	}
 }
 
