@@ -10,13 +10,14 @@ body {
 	background: #1d2120;
 	color: white;
 }
+
 a {
 	color: #bcd5d1;
 	transition: all 1.5s ease;
-}
-a:hover {
-	text-decoration: none;
-	color: #1d2120;
+	&:hover {
+		text-decoration: none;
+		color: #1d2120;
+	}
 }
 
 #sideNav {
@@ -27,41 +28,41 @@ a:hover {
 	font-size: 16px;
 	line-height: 25px;
 	background-color: #f9f9f9;
-}
-#sideNav p,
-#sideNav li a {
-	padding: 10px 0 10px 45px;
-}
-#sideNav a {
-	display: block;
-	border-left: 5px solid transparent;
-}
-#sideNav a.active {
-	border-color: #1d2120;
-	color: #1d2120;
-}
-#sideNav ul {
-	list-style: none;
-	padding: 0;
-}
-#sideNav li:hover a {
-	color: #1d2120;
-}
-#sideNav p:first-of-type {
-	padding-top: 0;
+	p,
+	li a {
+		padding: 10px 0 10px 45px;
+	}
+	a {
+		display: block;
+		border-left: 5px solid transparent;
+		&.active {
+			border-color: #1d2120;
+			color: #1d2120;
+			text-decoration: none;
+		}
+	}
+	ul {
+		list-style: none;
+		padding: 0;
+	}
+	li:hover a {
+		color: #1d2120;
+	}
+	p:first-of-type {
+		padding-top: 0;
+	}
 }
 
 #mainContent {
-	float: left;
+	float: right;
 	background-color: white;
 	height: 100vh;
 	color: #7c7997;
 	padding: 50px;
-}
-#mainContent img {
-	max-width: 100%;
-	height: auto;
-	margin-bottom: 50px;
+	img {
+		max-width: 100%;
+		height: auto;
+	}
 }
 
 #portraits,
@@ -77,11 +78,26 @@ a:hover {
 	margin: 0 0 50px 50px;
 	border: none !important;
 }
+.photo-caption {
+	color: #b3b3b3;
+	top: 0;
+}
+.sticky {
+	position: -webkit-sticky;
+	position: sticky;
+}
+.sub-section {
+	margin-bottom: 50px;
+	img {
+		margin-bottom: 50px;
+		&:last-of-type {
+			margin-bottom: 0;
+		}
+	}
+}
 
 @media only screen and (max-width: 767px) {
-	#home {
-		display: none;
-	}
+
 }
 
  /* Custom, iPhone */ 
@@ -89,6 +105,9 @@ a:hover {
 	#sideNav {
 		background-image: url(../img/Bird.png);
 		background-size: cover;
+	}
+	.sub-section {
+		min-height: 100vh;
 	}
 }
 
@@ -99,8 +118,9 @@ a:hover {
 
 /* Small Devices, Tablets */
 @media only screen and (min-width: 768px) {
-#sideNav {
+	#sideNav {
 		background-image: none;
+		position: fixed;
 	}
 }
 
